@@ -1,0 +1,8 @@
+version: "2"
+
+hexo:
+  image: novate/hexo
+  volumes:
+    - "/docker/hexo/var/opt/blog:/var/opt/blog"
+  ports:
+    - "4000:4000"
