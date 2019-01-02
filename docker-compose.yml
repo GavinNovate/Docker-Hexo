@@ -1,8 +1,8 @@
-version: "2"
-
 hexo:
+  container_name: 'hexo'
   image: novate/hexo
+  restart: always
+  ports:
+    - '4000:4000'
   volumes:
     - "/docker/hexo/var/opt/blog:/var/opt/blog"
-  ports:
-    - "4000:4000"
