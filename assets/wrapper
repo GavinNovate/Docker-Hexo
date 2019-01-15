@@ -1,3 +1,6 @@
 if [ ! -f "_config.yml" ];then
     cp -rf /var/opt/hexo/* /var/opt/blog/
 fi
+if [ -f "_config.yml" ];then
+    echo "Hexo success created."
+fi
