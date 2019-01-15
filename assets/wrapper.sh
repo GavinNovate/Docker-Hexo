@@ -1,3 +1,5 @@
+#!/bin/sh
+
 if [ ! -f "_config.yml" ];then
     cp -rf /var/opt/hexo/* /var/opt/blog/
 fi
