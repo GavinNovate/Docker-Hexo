@@ -12,6 +12,6 @@ EXPOSE 4000
 
 VOLUME /var/opt/blog
 
-COPY assets/wrapper.sh /usr/local/bin/
+COPY assets/wrapper /usr/local/bin/
 
-CMD ["/usr/local/bin/wrapper.sh"]
+CMD ["/usr/local/bin/wrapper"]
