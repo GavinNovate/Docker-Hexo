@@ -1,10 +1,12 @@
 FROM novate/node
 
-RUN apt-get update \
-  && apt-get install -y git-core --no-install-recommends \
+RUN buildDeps='git-core ca-certificates' \
+  && apt-get update \
+  && apt-get install -y $buildDeps --no-install-recommends \
   && rm -rf /var/lib/apt/lists/* \
   && npm install -g hexo-cli \
-  && hexo init /var/opt/hexo
+  && hexo init /var/opt/hexo \
+  && apt-get purge -y --auto-remove $buildDeps
 
 WORKDIR /var/opt/blog
 
