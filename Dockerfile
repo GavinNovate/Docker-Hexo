@@ -8,11 +8,11 @@ RUN buildDeps='git-core ca-certificates' \
   && hexo init /var/opt/hexo \
   && apt-get purge -y --auto-remove $buildDeps
 
-WORKDIR /var/opt/blog
-
 EXPOSE 4000
 
 VOLUME /var/opt/blog
+
+WORKDIR /var/opt/blog
 
 COPY assets/wrapper /usr/local/bin/
 
